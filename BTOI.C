@@ -1,4 +1,3 @@
-
  #include <stdio.h>
  main()
  {
@@ -36,6 +35,17 @@
       c = getc(fp1);
       fprintf(fp2,"%4d",c);
      }
+
+fprintf(fp2, "%4d", 0); # pads a zero
+while ((c = getc(fp1)) != EOF){
+  for (i = 1; i <= y; i++){
+    for (j = 1; j <= x; j++){
+      c = getc(fp1);
+      fprintf(fp2, "%4d", c);
+    }
+  }
+}
+
  fclose(fp1);
  fclose(fp2);
 }
